@@ -9,7 +9,7 @@
         </div>
         <div class="title-box">
           <h3 class="char-name">陳映臻 (Eishin)</h3>
-          <span class="char-title">🧙‍♀️ 全端/前端開發者</span>
+          <span class="char-title">全端/數據工程師</span>
         </div>
       </div>
 
@@ -24,11 +24,12 @@
 
       <!-- 🎨 休閒活動 -->
       <div class="section-box">
-        <h4 class="section-title">🪴 休閒活動</h4>
+        <h4 class="section-title">🪴 休閒活動 (Hobbies)</h4>
         <div class="hobby-tags">
-          <span class="hobby-chip">🌱 綠色植栽養殖</span>
+          <span class="hobby-chip">🌱 綠色植栽</span>
+          <span class="hobby-chip">🚴 單車騎行</span>
+          <span class="hobby-chip">☕ 美食探索</span>
           <span class="hobby-chip">✈️ 海外自由行</span>
-          <span class="hobby-chip">☕ 咖啡與美食探索</span>
         </div>
       </div>
     </div>
@@ -49,7 +50,7 @@
 
           <div class="lang-item">
             <div class="lang-info">
-              <span>日文 (Fluent / JLPT N1)</span>
+              <span>日文 (JLPT /  N1)</span>
               <span>90%</span>
             </div>
             <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
@@ -79,7 +80,7 @@
           </li>
           <li>
             <strong class="course-name">Google 數位人才探索計劃</strong>
-            <span class="course-desc">學習Google Cloud、Gemini應用</span>
+            <span class="course-desc">Google Cloud、Gemini應用</span>
           </li>
         </ul>
       </div>

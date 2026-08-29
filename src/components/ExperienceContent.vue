@@ -113,7 +113,7 @@ const expList = ref([
     tasks: [
       '內部系統跨部門需求溝通與追蹤',
       '撰寫單元測試，提高測試覆蓋率',
-      'Vue.js 與 Web API 前端組件開發',
+      'Vue.js/Web API 前端組件開發',
       'Message Queue 串連分散式系統 ',
       'Docker 搭配 Jinkins 自動化 DI/CD ',
     ]
@@ -131,6 +131,7 @@ const expList = ref([
       '開發資料血緣追蹤系統',
       '自動化監控 Schema 差異',
       '參與資料庫設計與關聯建構',
+      '推動Linux環境自動化 CI/CD',
       '建構團隊專屬 Python Library'
     ]
   }
