@@ -35,3 +35,23 @@ src/
 │   └── HomeView.vue            # 主地圖頁面
 └── main.js
 ```
+
+## Local Development & Build
+1. 複製專案與安裝依賴
+```
+git clone https://github.com/EishinCHEN/Resume.git
+cd Resume
+npm install
+```
+
+2. 啟動本機開發伺服器
+```
+npm run dev
+```
+瀏覽器開啟 http://localhost:5173 即可預覽。
+
+3. 打包與預覽
+```
+npm run build
+npm run preview
+```
