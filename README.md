@@ -1,44 +1,37 @@
-# Resume
+# Eishin's Interactive Resume | 繪本風格互動履歷
 
-This template should help get you started developing with Vue 3 in Vite.
+> 這是一份 RPG 風格冒險探索的互動式個人履歷網站。  
+> 透過地圖探索、技能樹與職涯地標，以遊戲體驗的方式認識我的技術背景與實戰成果。
 
-## Recommended IDE Setup
+**[立即體驗](https://eishinchen.github.io/Resume/)**
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+| 領域 | 使用技術 |
+| :--- | :--- |
+| **Core Framework** | Vue 3 |
+| **Build Tool** | Vite |
+| **Styling & Layout** | CSS3 |
+| **Deployment** | GitHub Pages + GitHub Actions |
+| **Design Style** | Canva |
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Project Structure
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```text
+src/
+├── assets/             # SVG 地圖、背景圖與全域樣式
+├── components/         # 模組化組件
+│   ├── AboutContent.vue        # 角色檔案
+│   ├── SkillTreeContent.vue    # 技能樹
+│   ├── ExperienceContent.vue   # 職涯足跡
+│   ├── DetailModal.vue         # 動態彈出視窗
+│   ├── StatusCard.vue          # 個人狀態面板
+│   └── DialogBox.vue           # 角色對話框
+├── views/
+│   └── HomeView.vue            # 主地圖頁面
+└── main.js
 ```
