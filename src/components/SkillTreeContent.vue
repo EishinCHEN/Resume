@@ -32,9 +32,13 @@
         </div>
       </div>
 
-      <!-- 如果點到的技能尚未綁定作品，顯示溫馨提示 -->
+      <!-- 如果點到的技能尚未綁定作品，顯示圖片與提示 -->
       <div v-else class="empty-project">
-        <p>💡 點擊右側技能樹上的標籤，切換查看對應的實戰作品！</p>
+        <img src="@/assets/empty-box.svg" alt="No Projects" class="empty-img" />
+        <p class="empty-text">
+          目前尚無公開的展示作品<br />
+          <span class="empty-subtext">相關技術主要應用於內部系統開發或資料庫維護</span>
+        </p>
       </div>
     </div>
 
@@ -84,8 +88,8 @@ const skillList = ref([
     project: {
       title: 'RPG 風格互動式履歷網站',
       desc: '使用 Vue 3 + Vite 開發的互動式個人履歷。',
-      demoUrl: '',
-      githubUrl: ''
+      demoUrl: 'https://eishinchen.github.io/Resume/',
+      githubUrl: 'https://github.com/EishinCHEN/Resume'
     }
   },
   {
@@ -264,5 +268,42 @@ const selectSkill = (skill) => {
   transform: scale(1.1) rotate(-1deg);
   background-color: #937157;
   color: #f7f4f2;
+}
+
+.empty-project {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background-color: #fcfbfa;
+  border: 2px dashed #d0c3b9;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.empty-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  opacity: 0.85;
+  filter: drop-shadow(1px 1px 0px rgba(92, 39, 0, 0.15));
+}
+
+.empty-text {
+  font-size: 13px;
+  color: #5c2700;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.empty-subtext {
+  font-size: 11px;
+  color: #937157;
+  display: inline-block;
+  margin-top: 4px;
 }
 </style>
