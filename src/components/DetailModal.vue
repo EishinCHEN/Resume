@@ -1,21 +1,21 @@
 <template>
-    <Transition name="doodle-pop">
-        <div v-if="isOpen" class="modal-overlay" @click.self="close">
-            <div class="doodle-modal">
-                <!-- 關閉按鈕 -->
-                <button class="close-btn" @click="close">✕</button>
-                
-                <!-- 視窗標題 -->
-                <div class="modal-header">
-                    <h2>{{ title }}</h2>
-                </div>
+  <Transition name="doodle-pop">
+    <div v-if="isOpen" class="modal-overlay" @click.self="close">
+      <div class="doodle-modal">
+        <!-- 關閉按鈕 -->
+        <button class="close-btn" @click="close">✕</button>
 
-                <!-- 視窗動態內容區 -->
-                <div class="modal-body">
-                    <slot></slot>
-                </div>
-            </div>
+        <!-- 視窗標題 -->
+        <div class="modal-header">
+          <h2>{{ title }}</h2>
         </div>
+
+        <!-- 視窗動態內容區 -->
+        <div class="modal-body">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
   </Transition>
 </template>
 
@@ -74,8 +74,8 @@ const close = () => emit('close')
   border-radius: 20px 225px 20px 255px/225px 20px 255px 20px;
   padding: 30px;
   width: 80%;
-  max-width: 600px;
-  max-height: 80vh;
+  max-width: 820px;
+  max-height: 85vh;
   overflow-y: auto;
   position: relative;
   -ms-overflow-style: none; /* IE and Edge */
@@ -102,6 +102,7 @@ const close = () => emit('close')
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .close-btn:hover {
@@ -119,5 +120,26 @@ const close = () => emit('close')
 .modal-body {
   color: #5c2700;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .doodle-modal {
+    width: 90%;
+    padding: 20px 16px;
+    max-height: 90vh;
+  }
+
+  /* 將 Slot 的橫向 Flex 布局改為上下縱向排列 */
+  .modal-body :deep([class*='-split-layout']) {
+    flex-direction: column !important;
+  }
+
+  /* 將子面板寬度重置為 100% 滿版 */
+  .modal-body :deep([class*='-panel']),
+  .modal-body :deep(.detail-panel),
+  .modal-body :deep(.profile-panel) {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
 }
 </style>
