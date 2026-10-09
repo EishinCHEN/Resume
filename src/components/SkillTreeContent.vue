@@ -225,11 +225,14 @@ const selectSkill = (skill) => {
 .tree-panel {
   flex: 1;
   position: relative;
+  min-width: 0;
 }
 
 .skill-board {
   position: relative;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 390px;
   border: 2.5px solid #5c2700;
   border-radius: 12px;
   overflow: hidden;
@@ -240,6 +243,7 @@ const selectSkill = (skill) => {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .skill-node-tag {

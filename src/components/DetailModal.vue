@@ -75,6 +75,7 @@ const close = () => emit('close')
   padding: 30px;
   width: 80%;
   max-width: 820px;
+  min-height: 380px; /* 避免彈窗由零撐大 */
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
@@ -120,6 +121,7 @@ const close = () => emit('close')
 .modal-body {
   color: #5c2700;
   line-height: 1.6;
+  min-height: 300px; /* 設定基本高度 防止圖片載入動態變化 */
 }
 
 @media (max-width: 768px) {
